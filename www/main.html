@@ -33,7 +33,6 @@
 			var device;
 		</script>
 		<script src="js/lib/pageslider.js"></script>
-		<script src="js/lib/iscroll-zoom.js"></script>
 		<script src="js/lib/hammer.js"></script>
 	</head>
 
@@ -386,44 +385,6 @@
 					}
 				});
 			}
-
-			function loaded1() {
-				birdListScroll = new IScroll('#birdListWarp', {
-					scrollbars : true,
-					click : true,
-					interactiveScrollbars : true,
-					scrollbars : 'custom',
-					resizeScrollbars : false
-				});
-				setTimeout(scrollToBird, 1);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 300);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 500);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 750);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 2000);
-			}
-
-
-			document.addEventListener('touchmove', preventDefault, false);
-			function preventDefault(e) {
-				e.preventDefault();
-			};
-
 		</script>
 		<script>
 			if ('addEventListener' in document) {
