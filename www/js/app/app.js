@@ -6,7 +6,6 @@ var arrayLegth = birdInformation.length;
 
 function init() {
 	console.log("dom loaded");
-	document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 function onDeviceReady() {
@@ -83,7 +82,6 @@ function route(event) {
 			$('.aboutPageBack').hide();
 			$('#navBarShower').hide();
 		} else if (hash === "#name") {
-			document.addEventListener('touchmove', preventDefault, false);
 			menuChoosen = 1;
 			$('#navBarShower').show();
 			$('#fixedShow').show();
@@ -100,9 +98,7 @@ function route(event) {
 			$('#fixedShow').show();
 			$('#navBarShower').hide();
 			setTimeout(function() {document.getElementById("photoCreditNames").innerHTML = photoGrapher;}, 10);
-			document.removeEventListener('touchmove', preventDefault, false);
 		} else if (hash === "#detailedPage") {
-			document.removeEventListener('touchmove', preventDefault, false);
 			$('#navBarSeasonShow').hide();
 			$('.languageButton').removeClass("languageButton-change");
 			if (menuChoosen == 1) {
@@ -124,7 +120,6 @@ function route(event) {
 			$("#backButtonHref").attr("href", "#detailedPage");
 			setTimeout(loadImgGallery, 1);
 		} else if (hash === "#seasonMenu") {
-			console.log(path);
 			menuChoosen = 2;
 			$('#navBarSeasonShow').hide();
 			$('#navBarShower').show();
@@ -137,7 +132,6 @@ function route(event) {
 			$("#backButtonHref").attr("href", "#");
 			setTimeout(laguageSeasonMenu, 1);
 		} else if (hash === "#seasonMonth") {
-			document.addEventListener('touchmove', preventDefault, false);
 			$("#backButtonHref").attr("href", "#seasonMenu");
 			$('#navBarSeasonShow').show();
 			setTimeout(seasonBirdLoad, 1);
@@ -146,7 +140,6 @@ function route(event) {
 			$('#navBarShower').hide();
 			$('#fixedShow').hide();
 			searchBarToggleFunction();
-			//document.addEventListener('touchmove', preventDefault, false);
 			setTimeout(laguageMainPage, 1);
 		}
 	}
@@ -158,7 +151,7 @@ $('.aboutPageBack').hide();
 
 // BIRD WINDOW / GALLERY //
 function scrollToBird() {
-	birdListScroll.scrollTo(0, nameScroll);
+	 $(document).scrollTop(nameScroll); //change
 }
 
 function loadBirdsEngFunction() {
@@ -182,15 +175,6 @@ function loadBirdsEngFunction() {
 				out = '<div id="birdWindowFooter"></div>';
 				$('.birdWindow').append(out);
 			}, 250);
-			if (birdListScroll != null) {
-				console.log("zerstört");
-				birdListScroll.destroy();
-				birdListScroll = null;
-				loaded1();
-			} else {
-				console.log("gab nichts zum destroyeeenn");
-				loaded1();
-			}
 		} else {
 			$('.birdWindow').html("");
 			var out = '<li class="marginTop"></li>';
@@ -208,15 +192,6 @@ function loadBirdsEngFunction() {
 				out = '<div id="birdWindowFooter"></div>';
 				$('.birdWindow').append(out);
 			}, 250);
-			if (birdListScroll != null) {
-				console.log("zerstört");
-				birdListScroll.destroy();
-				birdListScroll = null;
-				loaded1();
-			} else {
-				console.log("gab nichts zum destroyeeenn");
-				loaded1();
-			}
 		}
 	}
 }
@@ -255,9 +230,6 @@ function searchBarToggleFunction() {
 
 
 $('#searchInput').keyup(function() {
-	birdListScroll.destroy();
-	birdListScroll = null;
-	loaded1();
 	if (lang == false) {
 		searchTerm = $('#searchInput').val();
 		var myExp = new RegExp(searchTerm, "i");
@@ -421,7 +393,7 @@ var bip4;
 var bip5;
 var bip6;
 function grabID(e) {
-	nameScroll = birdListScroll.y;
+	nameScroll = $(document).scrollTop(); //change
 	numberAN = 1;
 	var birdSelector = e.getAttribute("data-id");
 	birdInformationABC.some(function(entry, i) {
@@ -483,7 +455,6 @@ function documentComplexReady() {
 		}
 		$('#birdDetailGallery').html(out);
 	}
-	console.log(detailedSwiper);
 	var detailedSwiper = new Swiper('.swiper-container', {
 		// Optional parameters
 		direction : 'horizontal',

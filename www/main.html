@@ -21,7 +21,6 @@
 		<script src="js/lib/birdDetail.js"></script>
 		<script src="js/lib/birdDetailindexSort.js"></script>
 		<script>
-			var birdListScroll;
 			var lang = true;
 			var menuChoosen = 0;
 			// 1 == name, 2 == Season
@@ -33,7 +32,6 @@
 			var device;
 		</script>
 		<script src="js/lib/pageslider.js"></script>
-		<script src="js/lib/iscroll-zoom.js"></script>
 		<script src="js/lib/hammer.js"></script>
 	</head>
 
@@ -251,7 +249,7 @@
 			<h2>Photographers</h2>
 			<div class="lineAbout2" style="margin-bottom: 0px;"></div>
 			<p class="fontSw" style="text-align: center;">We want to thank the following photographers, who made this possible!</p>
-			<p id="photoCreditNames" class="fontSw" style="padding-bottom: 100px; padding-top: 100px;"></p>
+			<p id="photoCreditNames" class="fontSw" style="padding-bottom: 100px; padding-top: 20px;"></p>
 			</div>
 			</div>
 		</script>
@@ -386,44 +384,6 @@
 					}
 				});
 			}
-
-			function loaded1() {
-				birdListScroll = new IScroll('#birdListWarp', {
-					scrollbars : true,
-					click : true,
-					interactiveScrollbars : true,
-					scrollbars : 'custom',
-					resizeScrollbars : false
-				});
-				setTimeout(scrollToBird, 1);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 300);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 500);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 750);
-				setTimeout(function() {
-					if (birdListScroll != null) {
-						birdListScroll.refresh();
-					}
-				}, 2000);
-			}
-
-
-			document.addEventListener('touchmove', preventDefault, false);
-			function preventDefault(e) {
-				e.preventDefault();
-			};
-
 		</script>
 		<script>
 			if ('addEventListener' in document) {

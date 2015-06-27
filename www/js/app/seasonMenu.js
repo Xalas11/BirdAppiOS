@@ -693,14 +693,4 @@ function seasonBirdLoad() {
 		$('.birdWindow').html(out);
 		$('.birdWindow').append('<div class="birdWindowFooter-change"></div>');
 	}
-	if (birdListScroll != null) {
-		console.log("zerstört");
-		birdListScroll.destroy();
-		birdListScroll = null;
-		loaded1();
-	} else {
-		console.log("gab nichts zum destroyeeenn");
-		loaded1();
-	}
-	
 }
