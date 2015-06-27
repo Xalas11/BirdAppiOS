@@ -455,7 +455,6 @@ function documentComplexReady() {
 		}
 		$('#birdDetailGallery').html(out);
 	}
-	console.log(detailedSwiper);
 	var detailedSwiper = new Swiper('.swiper-container', {
 		// Optional parameters
 		direction : 'horizontal',
