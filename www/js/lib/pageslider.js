@@ -45,46 +45,46 @@ function PageSlider(container) {
         // Position the page at the starting position of the animation
         page.attr("class", "page " + from);
 		
-					setTimeout(function() {
-					
-					var hashlang = window.location.hash;
-					
-					switch(oldswitch) { 
-						case '#detailedPage':
-						$('#detailedPageWarp').remove();
-						console.log("dP");
-						break;
-						case '#about':
-						$('#aboutWarp').remove();
-						console.log("a");
-						break;
-						case '#detailedPageGallery':
-						$('#detailedPageGalleryWarp').remove();
-						console.log("dpg");
-						break;
-						case '#seasonMenu':
-						$('#sPContainer').remove();
-						console.log("seasonMenu");
-						break;
-						case '#seasonMonth':
-						$('#birdListWarp').remove();
-						console.log("seasonMonth");
-						break;
-						case '#name':
-						$('#birdListWarp').remove();
-						console.log("name");
-						break;
-						case '':
-						$('#mPWrap').remove();
-						console.log("main");
-						//page transition center
-						break;
-					};
-					oldswitch = hashlang; 
-					}, 250);
-        // currentPage.one('transitionEnd webkitTransitionEnd transitionend', function(e) {
-            // $(e.target).remove();
-        // });
+					// setTimeout(function() {
+// 					
+					// var hashlang = window.location.hash;
+// 					
+					// switch(oldswitch) { 
+						// case '#detailedPage':
+						// $('#detailedPageWarp').remove();
+						// console.log("dP");
+						// break;
+						// case '#about':
+						// $('#aboutWarp').remove();
+						// console.log("a");
+						// break;
+						// case '#detailedPageGallery':
+						// $('#detailedPageGalleryWarp').remove();
+						// console.log("dpg");
+						// break;
+						// case '#seasonMenu':
+						// $('#sPContainer').remove();
+						// console.log("seasonMenu");
+						// break;
+						// case '#seasonMonth':
+						// $('#birdListWarp').remove();
+						// console.log("seasonMonth");
+						// break;
+						// case '#name':
+						// $('#birdListWarp').remove();
+						// console.log("name");
+						// break;
+						// case '':
+						// $('#mPWrap').remove();
+						// console.log("main");
+						// //page transition center
+						// break;
+					// };
+					// oldswitch = hashlang; 
+					// }, 250);
+        currentPage.one('transitionEnd webkitTransitionEnd transitionend', function(e) {
+            $(e.target).remove();
+        });
 
         // Force reflow. More information here: http://www.phpied.com/rendering-repaint-reflowrelayout-restyle/
         container[0].offsetWidth;
