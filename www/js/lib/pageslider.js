@@ -2,7 +2,8 @@
  * - History management is currently done using window.location.hash.  This could easily be changed to use Push State instead.
  * - jQuery dependency for now. This could also be easily removed.
  */
-var oldswitch = '';;
+var pagecoutn = 0;
+var oldswitch = '';
 
 function PageSlider(container) {
 	
@@ -34,7 +35,6 @@ function PageSlider(container) {
     // Use this function directly if you want to control the sliding direction outside PageSlider
     this.slidePageFrom = function(page, from) {
     	
-   		var pagecoutn = 0;
    		if (pagecoutn == 0) {
    			pagecoutn = 1;
    		} else {

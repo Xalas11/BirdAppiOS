@@ -77,7 +77,6 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
 		<div id="anticlick"></div>
 		<script id="birdSeasonMenuTemplate" type="template">
@@ -379,6 +378,7 @@
 						trans = "-webkit-translate3d(" + posX + "px," + posY + "px, 0) scale(" + scale + ")";
 					}
 					rect.style.transform = trans;
+					rect.style.webkitTransform = trans;
 
 					if (scale == 1) {
 						$('#imgZoomGallery').removeClass('swiper-no-swiping');
