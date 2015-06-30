@@ -83,6 +83,7 @@ function route(event) {
 			$('#navBarShower').hide();
 		} else if (hash === "#name") {
 			menuChoosen = 1;
+			setTimeout(scrollToBird, 1);
 			$('#navBarShower').show();
 			$('#fixedShow').show();
 			$('#backButton').addClass("nameColor");
@@ -135,6 +136,7 @@ function route(event) {
 			$("#backButtonHref").attr("href", "#seasonMenu");
 			$('#navBarSeasonShow').show();
 			setTimeout(seasonBirdLoad, 1);
+			setTimeout(scrollToBird, 2);
 		} else {
 			$('.aboutPageBack').hide();
 			$('#navBarShower').hide();
@@ -151,7 +153,7 @@ $('.aboutPageBack').hide();
 
 // BIRD WINDOW / GALLERY //
 function scrollToBird() {
-	 $(document).scrollTop(nameScroll); //change
+	 $("#birdListWarp").scrollTop(nameScroll); //change
 }
 
 function loadBirdsEngFunction() {
@@ -162,36 +164,38 @@ function loadBirdsEngFunction() {
 			$('.birdWindow').html("");
 			var out = '<li class="marginTop"></li>';
 			$('.birdWindow').append(out);
-			for (var obj = 0; obj < 30; obj++) {
+			for (var obj = 0; obj < arrayLegth; obj++) {
 				var temp = birdWindowABC.replace(/{{birdImgPath}}/ig, abra + birdInformationABC[obj].birdImgPath).replace(/{{birdTitel}}/ig, birdInformationABC[obj].birdTitelViet).replace(/{{birdID}}/ig, birdInformationABC[obj].birdSerialnumber);
 				$('.birdWindow').append(temp);
 			}
 			out = '<div id="birdWindowFooter"></div>';
-			setTimeout(function() {
-				for (var obj = 30; obj < arrayLegth; obj++) {
-					var temp = birdWindowABC.replace(/{{birdImgPath}}/ig, abra + birdInformationABC[obj].birdImgPath).replace(/{{birdTitel}}/ig, birdInformationABC[obj].birdTitelViet).replace(/{{birdID}}/ig, birdInformationABC[obj].birdSerialnumber);
-					$('.birdWindow').append(temp);
-				}
-				out = '<div id="birdWindowFooter"></div>';
-				$('.birdWindow').append(out);
-			}, 250);
+			$('.birdWindow').append(out);
+			// setTimeout(function() {
+				// for (var obj = 30; obj < arrayLegth; obj++) {
+					// var temp = birdWindowABC.replace(/{{birdImgPath}}/ig, abra + birdInformationABC[obj].birdImgPath).replace(/{{birdTitel}}/ig, birdInformationABC[obj].birdTitelViet).replace(/{{birdID}}/ig, birdInformationABC[obj].birdSerialnumber);
+					// $('.birdWindow').append(temp);
+				// }
+				// out = '<div id="birdWindowFooter"></div>';
+				// $('.birdWindow').append(out);
+			// }, 250);
 		} else {
 			$('.birdWindow').html("");
 			var out = '<li class="marginTop"></li>';
 			$('.birdWindow').append(out);
-			for (var obj = 0; obj < 30; obj++) {
+			for (var obj = 0; obj < arrayLegth; obj++) {
 				var temp = birdWindowABC.replace(/{{birdImgPath}}/ig, abra + birdInformationABC[obj].birdImgPath).replace(/{{birdTitel}}/ig, birdInformationABC[obj].birdTitel).replace(/{{birdID}}/ig, birdInformationABC[obj].birdSerialnumber);
 				$('.birdWindow').append(temp);
 			}
 			out = '<div id="birdWindowFooter"></div>';
-			setTimeout(function() {
-				for (var obj = 30; obj < arrayLegth; obj++) {
-					var temp = birdWindowABC.replace(/{{birdImgPath}}/ig, abra + birdInformationABC[obj].birdImgPath).replace(/{{birdTitel}}/ig, birdInformationABC[obj].birdTitel).replace(/{{birdID}}/ig, birdInformationABC[obj].birdSerialnumber);
-					$('.birdWindow').append(temp);
-				}
-				out = '<div id="birdWindowFooter"></div>';
-				$('.birdWindow').append(out);
-			}, 250);
+			$('.birdWindow').append(out);
+			// setTimeout(function() {
+				// for (var obj = 30; obj < arrayLegth; obj++) {
+					// var temp = birdWindowABC.replace(/{{birdImgPath}}/ig, abra + birdInformationABC[obj].birdImgPath).replace(/{{birdTitel}}/ig, birdInformationABC[obj].birdTitel).replace(/{{birdID}}/ig, birdInformationABC[obj].birdSerialnumber);
+					// $('.birdWindow').append(temp);
+				// }
+				// out = '<div id="birdWindowFooter"></div>';
+				// $('.birdWindow').append(out);
+			// }, 250);
 		}
 	}
 }
@@ -393,7 +397,8 @@ var bip4;
 var bip5;
 var bip6;
 function grabID(e) {
-	nameScroll = $(document).scrollTop(); //change
+	nameScroll = $("#birdListWarp").scrollTop(); //change
+	console.log(nameScroll);
 	numberAN = 1;
 	var birdSelector = e.getAttribute("data-id");
 	birdInformationABC.some(function(entry, i) {

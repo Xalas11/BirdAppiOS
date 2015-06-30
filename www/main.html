@@ -320,7 +320,6 @@
 				    wAPP;
 
 				hammertime.on('pan tap panend doubletap pinch pinchend', function(ev) {
-					console.log("something is reconized");
 					switch(ev.type) {
 					case 'pinch':
 						console.log("PINCHE");
@@ -372,10 +371,10 @@
 							scale = 1;
 						}
 					}
-					var trans = "-webkit-translate3d(0, 0, 0) scale(1)";
+					var trans = "translate3d(0, 0, 0) scale(1)";
 
 					if (scale != 1) {
-						trans = "-webkit-translate3d(" + posX + "px," + posY + "px, 0) scale(" + scale + ")";
+						trans = "translate3d(" + posX + "px," + posY + "px, 0) scale(" + scale + ")";
 					}
 					rect.style.transform = trans;
 					rect.style.webkitTransform = trans;
