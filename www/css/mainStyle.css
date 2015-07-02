@@ -86,6 +86,13 @@ body {
 body, html {
 	-ms-overflow-style: none !important;
 }
+#anticlick {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	color: rgba(255, 255, 255, 0);
+}
 @viewport{height:device-height}
 @viewport{width:device-width}
 @-ms-viewport{height:device-height}
@@ -112,52 +119,9 @@ body, html {
 	margin-top: 2%;
 }
 /* copyRight */
-
-/*::-webkit-scrollbar{
- width: 30px;
- }
-
- ::-webkit-scrollbar-track{
- }
- ::-webkit-scrollbar-thumb{
- height: 50px;
- background: #555555;
- }
-
- ::-webkit-scrollbar-track-piece {
- }*/
-
-/* Styled scrollbars */
-.iScrollVerticalScrollbar {
-	position: absolute;
-	z-index: 9999;
-	width: 30px;
-	height: 79%;
-	bottom: 2px;
-	top: 3%;
-	right: 2px;
-	overflow: hidden;
+#birdListWarp {
+	overflow-y: scroll;
 }
-
-.iScrollVerticalScrollbar.iScrollBothScrollbars {
-	bottom: 100px;
-}
-
-.iScrollIndicator {
-	position: absolute;
-	background: #555555;
-	border-left: 18px solid rgba(249, 0, 0, 0);
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
-}
-
-.iScrollVerticalScrollbar .iScrollIndicator {
-	width: 100%;
-	height: 30px;
-}
-
-/* end */
-
 /* template box */
 #templateShower {
 	overflow: hidden;
