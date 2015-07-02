@@ -83,7 +83,6 @@ function route(event) {
 			$('#navBarShower').hide();
 		} else if (hash === "#name") {
 			menuChoosen = 1;
-			setTimeout(scrollToBird, 1);
 			$('#navBarShower').show();
 			$('#fixedShow').show();
 			$('#backButton').addClass("nameColor");
@@ -94,6 +93,7 @@ function route(event) {
 			$("#backButtonHref").attr("href", "#");
 			$('#searchButton').removeClass("searchButton-change");
 			setTimeout(loadBirdsEngFunction, 1);
+			setTimeout(scrollToBird, 1);
 		} else if (hash === "#about") {
 			$('.aboutPageBack').show();
 			$('#fixedShow').show();
@@ -138,6 +138,7 @@ function route(event) {
 			setTimeout(seasonBirdLoad, 1);
 			setTimeout(scrollToBird, 2);
 		} else {
+			nameScroll = 0;
 			$('.aboutPageBack').hide();
 			$('#navBarShower').hide();
 			$('#fixedShow').hide();
