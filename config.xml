@@ -14,30 +14,30 @@
 		<preference name="HideKeyboardFormAccessoryBar" value="true"/>
 		<preference name="SuppressesIncrementalRendering" value="true"/>
 		<!-- ICONS -->
-		<icon src="res/icon/AppIcon29.png" width="29" height="29" />
-		<icon src="res/icon/AppIcon40.png" width="40" height="40" />
-		<icon src="res/icon/AppIcon50.png" width="50" height="50" />
-		<icon src="res/icon/AppIcon57.png" width="57" height="57" />
-		<icon src="res/icon/AppIcon58.png" width="58" height="58" />
-		<icon src="res/icon/AppIcon60.png" width="60" height="60" />
-		<icon src="res/icon/AppIcon72.png" width="72" height="72" />
-		<icon src="res/icon/AppIcon76.png" width="76" height="76" />
-		<icon src="res/icon/AppIcon80.png" width="80" height="80" />
-		<icon src="res/icon/AppIcon100.png" width="100" height="100" />
-		<icon src="res/icon/AppIcon114.png" width="114" height="114" />
-		<icon src="res/icon/AppIcon120.png" width="120" height="120" />
-		<icon src="res/icon/AppIcon144.png" width="144" height="144" />
-		<icon src="res/icon/AppIcon152.png" width="152" height="152" />
-		<icon src="res/icon/AppIcon180.png" width="180" height="180" />
+		<icon src="res/icon/App Icon29.png" width="29" height="29" />
+		<icon src="res/icon/App Icon40.png" width="40" height="40" />
+		<icon src="res/icon/App Icon50.png" width="50" height="50" />
+		<icon src="res/icon/App Icon57.png" width="57" height="57" />
+		<icon src="res/icon/App Icon58.png" width="58" height="58" />
+		<icon src="res/icon/App Icon60.png" width="60" height="60" />
+		<icon src="res/icon/App Icon72.png" width="72" height="72" />
+		<icon src="res/icon/App Icon76.png" width="76" height="76" />
+		<icon src="res/icon/App Icon80.png" width="80" height="80" />
+		<icon src="res/icon/App Icon100.png" width="100" height="100" />
+		<icon src="res/icon/App Icon114.png" width="114" height="114" />
+		<icon src="res/icon/App Icon120.png" width="120" height="120" />
+		<icon src="res/icon/App Icon144.png" width="144" height="144" />
+		<icon src="res/icon/App Icon152.png" width="152" height="152" />
+		<icon src="res/icon/App Icon180.png" width="180" height="180" />
 
 		<!-- SPLASH SCREEN -->
-		<splash src="res/screen/iphone.png" width="320" height="480"/>
-		<splash src="res/screen/iphone.png" width="640" height="960"/>
-		<splash src="res/screen/iphone.png" width="768" height="1024"/>
-		<splash src="res/screen/iphone.png" width="1536" height="2048"/>
-		<splash src="res/screen/iphone.png" width="640" height="1136"/>
-		<splash src="res/screen/iphone.png" width="750" height="1334"/>
-		<splash src="res/screen/iphone.png" width="1242" height="2208"/>
+		<splash src="res/screen/Splashscreen320x480.png" width="320" height="480"/>
+		<splash src="res/screen/Splashscreen640x960.png" width="640" height="960"/>
+		<splash src="res/screen/Splashscreen768x1024.png" width="768" height="1024"/>
+		<splash src="res/screen/Splashscreen1536x2048.png" width="1536" height="2048"/>
+		<splash src="res/screen/Splashscreen640x1136.png" width="640" height="1136"/>
+		<splash src="res/screen/Splashscreen750x1334.png" width="750" height="1334"/>
+		<splash src="res/screen/Splashscreen1242x2208.png" width="1242" height="2208"/>
 		<preference name="SplashScreenDelay" value="2000" />
 
 	</platform>
