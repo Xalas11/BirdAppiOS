@@ -13,8 +13,6 @@
 	<platform name="ios">
 		<preference name="HideKeyboardFormAccessoryBar" value="true"/>
 		<preference name="SuppressesIncrementalRendering" value="true"/>
-		<allow-intent href="itms:*" />
-		<allow-intent href="itms-apps:*" />
 		<!-- ICONS -->
 		<icon src="res/icon/AppIcon29.png" width="29" height="29" />
 		<icon src="res/icon/AppIcon40.png" width="40" height="40" />
